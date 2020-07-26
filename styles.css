@@ -7,14 +7,82 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(1920px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(1080px, 1fr));
-    height: 5600px
+    height: 5600px;
+    font-family: 'Oswald', sans-serif;
+    overflow: hidden
 }
 
 header {
     display: grid;
     grid-column: 1;
     grid-row: 1;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
+    font-size: 20px;
+}
+
+#mainMenu {
+    display: grid;
+    background-color: pink;
+    grid-column: 10 / 45;
+    grid-row: 3 / 6;
+}
+
+#mainMenu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+#mainMenu ul a {
+    text-decoration: none;
+    color: black;
+}
+
+#mainMenu ul li {
+    padding: 5px 30px;
+    border: 1px black solid;
+    background-color: white;
+    transition: all .1s ease-out;
+    position: relative;
+    transform-style: preserve-3d;  /*z-index: 1*/
+    pointer-events: auto
+}
+
+#mainMenu ul > *:first-child {
+    padding: 5px 25px
+}
+
+#mainMenu ul > *:first-child + * + * + * {
+    padding: 5px 22px
+}
+
+#mainMenu ul > *:first-child + * + * + * + * {
+    padding: 5px 19px
+}
+
+
+#mainMenu ul li::before {
+    content: "";
+    background-color: black;
+    position:absolute;
+    display: block;
+    width: 105px;
+    height: 45px;
+    transform: translateZ(-1px); /*z-index: -1*/
+    transition: all .1s ease-out;
+    pointer-events: none
+    
+}
+ #mainMenu ul li:hover{
+    transform: translate(-20px);
+}
+
+#mainMenu ul li:hover::before {
+    transform: translate(20px);
+    transform: translateZ(-1px);
+    
 }
 
