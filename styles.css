@@ -86,7 +86,7 @@ header {
 #sideMenu {
     display: grid; 
     grid-column: 2 / 8;
-    grid-row: 20 / 28;
+    grid-row: 30 / 40;
     
 }
 #sideMenu ul {
