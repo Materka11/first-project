@@ -23,7 +23,6 @@ header {
 
 #mainMenu {
     display: grid;
-    background-color: pink;
     grid-column: 10 / 45;
     grid-row: 3 / 6;
 }
@@ -36,53 +35,52 @@ header {
     list-style: none;
 }
 
-#mainMenu ul a {
+#mainMenu ul li a {
+    border: 1px black solid;
+    background-color: white;
+    position: relative;
+    transform-style: preserve-3d;  /*z-index: 1*/
+    pointer-events: auto;
     text-decoration: none;
     color: black;
 }
 
-#mainMenu ul li {
-    padding: 5px 30px;
-    border: 1px black solid;
-    background-color: white;
-    transition: all .1s ease-out;
-    position: relative;
-    transform-style: preserve-3d;  /*z-index: 1*/
-    pointer-events: auto
-}
-
-#mainMenu ul > *:first-child {
+#mainMenu ul li  > *:first-child  {
     padding: 5px 25px
 }
 
-#mainMenu ul > *:first-child + * + * + * {
+#mainMenu ul li .B {
+    padding: 5px 30px
+}
+
+#mainMenu ul li .K {
+    padding: 5px 30px
+}
+
+#mainMenu ul li .D {
     padding: 5px 22px
 }
 
-#mainMenu ul > *:first-child + * + * + * + * {
+#mainMenu ul li .P {
     padding: 5px 19px
 }
-
 
 #mainMenu ul li::before {
     content: "";
     background-color: black;
     position:absolute;
     display: block;
-    width: 105px;
-    height: 45px;
+    width: 110px;
+    height: 50px;
     transform: translateZ(-1px); /*z-index: -1*/
     transition: all .1s ease-out;
-    pointer-events: none
+    pointer-events: none;
+    transform: translate(10px, -1px);
     
-}
- #mainMenu ul li:hover{
-    transform: translate(-20px);
 }
 
 #mainMenu ul li:hover::before {
-    transform: translate(20px);
-    transform: translateZ(-1px);
-    
+    transform: translate(-4px, -9px);
+
 }
 
