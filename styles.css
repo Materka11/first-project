@@ -23,7 +23,7 @@ header {
 
 #mainMenu {
     display: grid;
-    grid-column: 10 / 45;
+    grid-column: 15 / 50;
     grid-row: 3 / 6;
 }
 
@@ -110,3 +110,32 @@ header {
 #sideMenu ul li a:hover {
     border-color:black;
 }
+
+#logo  {
+    display: grid;
+    grid-column: 5 / 13;
+    grid-row: 3;
+    width: 100%;
+        
+}
+ #sasuke {
+    display: grid;
+    grid-column: 16 / 36;
+    grid-row: 12;
+    width: 100%
+}
+ #sasuke img {
+    
+    width: 100%;
+    opacity: 70%;
+    
+}
+#naruto {
+    display: grid;
+    grid-column: 36 / -5;
+    grid-row: 5;
+}
+#naruto img {
+    width: 100%;
+   
+ }
