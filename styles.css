@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 #page {
@@ -9,7 +9,8 @@
     grid-template-rows: repeat(auto-fill, minmax(1080px, 1fr));
     font-family: 'Oswald', sans-serif;
     overflow: hidden;
-    box-sizing: border-box
+    box-sizing: border-box;
+    
 }
 
 header {
@@ -146,8 +147,9 @@ header {
 }
 #naruto {
     display: grid;
-    grid-column: 36 / -5;
+    grid-column: 36 / -1;
     grid-row: 5;
+    
 }
 #naruto img {
     width: 100%;
@@ -170,7 +172,7 @@ header {
     display: grid;
     list-style: none;
     grid-row: 25 / 27;
-    grid-column: 69 / -4
+    grid-column: 69 / -4;
 }
 
 
