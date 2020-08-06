@@ -47,6 +47,16 @@ header {
     height: 100vh
 }
 
+#klany {
+    display: grid;
+    grid-column: 1;
+    grid-row: 4;
+    grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
+    background-color: white;
+    height: 100vh
+}
+
 #mainMenu {
     display: grid;
     grid-column: 15 / 50;
@@ -243,4 +253,72 @@ header {
     flex: 30%;
     height: 20%;
     align-self: flex-end;
+}
+
+#klany article {
+    background-color: rgb(255, 216, 41);
+    grid-column: 5 / 36;
+    grid-row: 5 / 36;
+    border: 1px solid black;
+    border-radius: 50%
+}
+
+#klany article p {
+    font-size: 40px;
+    text-align: center;
+    padding: 160px 160px
+}
+
+#klany ul {
+    list-style: none;
+    grid-row: 32 / 40;
+    grid-column: 32 / 40;
+    background-color: rgb(255, 216, 41);
+    border: 1px solid black;
+    padding: 84px 41px;
+    border-radius: 50%
+}
+
+#klany .logo {
+    width: 90%
+}
+
+#yellowWall {
+    display: grid;
+    background-color: rgb(255, 216, 41);
+    grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
+    grid-row: 1 / -1;
+    grid-column: 43 / -1
+    
+}
+
+#yellowWall > *:first-child {
+    grid-row: 4;
+    grid-column: 5 / 15
+}
+
+#yellowWall > *:first-child + * {
+    grid-row: 6;
+    grid-column: 20 / 30
+}
+
+#yellowWall > *:first-child + * + * {
+    grid-row: 19;
+    grid-column: 7 / 20
+}
+
+#yellowWall > *:first-child + * + * + * {
+    grid-row: 22;
+    grid-column: 22 / 32
+}
+
+#yellowWall > *:first-child + * + * + * + * {
+    grid-row: 28;
+    grid-column: 6 / 16
+}
+
+#yellowWall > *:first-child + * + * + * + * + * {
+    grid-row: 33;
+    grid-column: 18 / 28
 }
