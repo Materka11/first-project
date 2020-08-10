@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naruto Project</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -29,15 +30,38 @@
              </ul>
             </div>
             <a id="sasuke"><img  src="img/sasuke%20render.png" alt="sasuke"></a>
-           <a id="naruto"> <img  src="img/naruto%20render%20v2.png" alt="naruto"></a>
+            <a id="naruto"> <img  src="img/naruto%20render%20v2.png" alt="naruto"></a>
         </header>
-        <div id="wioski">
+            <div id="wioski">
+               <div id="kageMapa">  
+                   <img id="Kage" src="img/Kage.png" alt="Kage" usemap="#Map" class="map"/>
+                   <map name="Map" id="#Map">
+                   <area href="#" shape="poly" target="_blank" alt="kazekage" title="kazekage" coords="129,469,120,393,106,310,117,282,113,249,94,246,128,202,187,207,184,210,166,222,197,268,215,301,220,359,234,405,244,430,247,447,235,475,198,479,163,480"/>
+                <area href="#" shape="poly" target="_blank" alt="tsuchikage" title="tsuchikage"
+coords="209,268,263,446,290,414,325,430,347,431,332,259,301,231,274,186,292,169,233,163,199,203,223,204"/>
+                <area href="#" shape="poly" target="_blank" alt="hokage" title="hokage"
+coords="352,419,339,251,359,215,368,177,338,171,396,135,457,160,427,174,442,223,471,255,477,289,487,436,459,447,418,402,368,405"/>
+                <area href="#" shape="poly" target="_blank" alt="raikage" title="raikage"
+coords="485,433,470,235,493,218,511,182,489,173,549,152,593,190,569,201,574,249,594,283,579,466,532,463,505,453"/>
+                <area href="#" shape="poly" target="_blank" alt="mizukage" title="mizukage"
+coords="564,461,593,294,589,263,612,251,637,215,625,203,675,198,709,233,688,243,681,300,693,327,673,385,697,375,745,373,680,450,647,471,675,471,623,488,604,493"/>
+            </map>
+            </div>
             <article>
                 <p>Pierwsza wioska, która powstała to wioska ukrytego liscia (konohagakure). Na jej podstawie utworzono kolejne cztery, które tworzą razem pieć wielkich wiosek ninja...</p>
             </article>
             <ul><li><a href="#">Czytaj więcej</a></li></ul>
-        </div>
+            </div>
     </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+            <script type="text/javascript" src="jquery.min.js"></script>
+            <script type="text/javascript" src="jquery.maphilight.min.js"></script>
+            <script type="text/javascript">
+            $(function () {
+            $('.map').maphilight();
+        });
+    </script>
 </body>
 </html>
-<link rel="stylesheet" href="styles.css"><script></script>
+<link rel="stylesheet" href="styles.css">

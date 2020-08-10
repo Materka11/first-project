@@ -203,3 +203,19 @@ header {
 #wioski ul li:hover::before {
     transform: translate(-4px, -14px);
 }
+
+#wioski #kageMapa {
+    display: grid;
+    grid-column: 3 / 35;
+    grid-row: 5 / 29;
+    transform: rotate(-15deg);
+    
+}
+
+#wioski #Kage{
+    width: 100%;
+    
+}
+
+
+
