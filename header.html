@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naruto Project</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -50,15 +51,60 @@
             </article>
             <ul id="czytajWiecej"><li><a href="#">Czytaj więcej</a></li></ul>
             <div id="yellowWall">
-                <img class="logo" src="img/uzumaki%20clan%20logo%20render.png" alt="Uzumaki">
-                <img class="logo" src="img/uchiha%20clan%20logo%20render.png" alt="Uchiha">
-                <img class="logo" src="img/senju%20clan%20logo%20render.png" alt="Senju">
-                <img class="logo" src="img/akimichi%20clan%20logo%20render.png" alt="Akmimichi">
-                <img class="logo" src="img/yamanaka%20clan%20logo%20render.png" alt="Yamanaka">
-                <img class="logo" src="img/Nara_Clan_Symbol%20render.png" alt="Nara">
+                <div class="trigger1"><img class="logo" src="img/uzumaki%20clan%20logo%20render.png" alt="Uzumaki"></div>
+                <div class="trigger2"><img class="logo" src="img/uchiha%20clan%20logo%20render.png" alt="Uchiha"></div>
+                <div class="trigger3"><img class="logo" src="img/senju%20clan%20logo%20render.png" alt="Senju"></div>
+                <div class="trigger4"><img class="logo" src="img/akimichi%20clan%20logo%20render.png" alt="Akmimichi"></div>
+                <div class="trigger5"><img class="logo" src="img/yamanaka%20clan%20logo%20render.png" alt="Yamanaka"></div>
+                <div class="trigger6"><img class="logo" src="img/Nara_Clan_Symbol%20render.png" alt="Nara"></div>
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var controller = new ScrollMagic.Controller();
+    
+        $(function () {
+        var scene = new ScrollMagic.Scene({triggerElement: "#klany", triggerHook: 0.9})
+				.setClassToggle(".trigger1", "move")
+				.addTo(controller);
+        });
+        
+        $(function () {
+        var scene = new ScrollMagic.Scene({triggerElement: "#klany", triggerHook: 0.7})
+				.setClassToggle(".trigger2", "move")
+				.addTo(controller);
+        });
+        
+        $(function () {
+        var scene = new ScrollMagic.Scene({triggerElement: "#klany", triggerHook: 0.5})
+				.setClassToggle(".trigger3", "move")
+				.addTo(controller);
+        });
+        
+         $(function () {
+        var scene = new ScrollMagic.Scene({triggerElement: "#klany", triggerHook: 0.3})
+				.setClassToggle(".trigger4", "move")
+				.addTo(controller);
+        });
+        
+        $(function () {
+        var scene = new ScrollMagic.Scene({triggerElement: "#klany", triggerHook: 0.2})
+				.setClassToggle(".trigger5", "move")
+				.addTo(controller);
+        });
+        
+        $(function () {
+        var scene = new ScrollMagic.Scene({triggerElement: "#klany", triggerHook: 0.05})
+				.setClassToggle(".trigger6", "move")
+				.addTo(controller);
+        });
+        
+        
+    </script>
 </body>
 </html>
-<link rel="stylesheet" href="styles.css"><script></script>
