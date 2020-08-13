@@ -30,7 +30,7 @@
              </ul>
             </div>
             <a id="sasuke"><img  src="img/sasuke%20render.png" alt="sasuke"></a>
-            <a id="naruto"> <img  src="img/naruto%20render%20v2.png" alt="naruto"></a>
+            <a id="naruto"> <img  src="img/naruto%20render.png" alt="naruto"></a>
         </header>
             <div id="wioski">
                <div id="kageMapa">  
@@ -84,6 +84,8 @@ coords="564,461,593,294,589,263,612,251,637,215,625,203,675,198,709,233,688,243,
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+        /* scrollmagic */
+        
         var controller = new ScrollMagic.Controller();
     
         $(function () {
@@ -125,6 +127,42 @@ coords="564,461,593,294,589,263,612,251,637,215,625,203,675,198,709,233,688,243,
         $(function () {
             $('.map').maphilight();
         });
+        
+        /* dark mode */
+        
+        const sasuke = document.querySelector("#sasuke");
+        const header = document.querySelector("header");
+        const sasukeImg = document.querySelector("#sasuke img");
+        const naruto = document.querySelector("#naruto");
+        const narutoImg = document.querySelector("#naruto img");
+        const wioski = document.querySelector("#wioski");
+        const bijuu = document.querySelector("#bijuu");
+        const klany = document.querySelector("#klany");
+        const klanyArticle = document.querySelector("#klany article");
+        const klanyUl = document.querySelector("#klany ul");
+        const yellowWall = document.querySelector("#yellowWall");
+        const sideMenuA = document.querySelectorAll("#sideMenu a");
+        
+        
+        sasuke.addEventListener("click", function(){
+            
+            sasuke.classList.toggle("darkMode");
+            header.classList.toggle("darkMode");
+            sasukeImg.classList.toggle("darkMode");
+            naruto.classList.toggle("darkMode");
+            narutoImg.classList.toggle("darkMode");
+            wioski.classList.toggle("darkMode");
+            bijuu.classList.toggle("darkMode");
+            klany.classList.toggle("darkMode");
+            klanyArticle.classList.toggle("darkMode");
+            klanyUl.classList.toggle("darkMode");
+            yellowWall.classList.toggle("darkMode");
+            
+            for (const a of sideMenuA) {
+                a.classList.toggle("darkMode");
+            }
+        });
+        
     </script>
 </body>
 </html>

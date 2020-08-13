@@ -125,6 +125,7 @@ header {
     grid-row: 30 / 40;
     
 }
+
 #sideMenu ul {
     display: flex;
     flex-direction: column;
@@ -141,8 +142,7 @@ header {
     border-bottom: 2px solid transparent;
     transition-duration:0.3s;
 }
-        
-    
+          
 #sideMenu ul li a:hover {
     border-color:black;
 }
@@ -154,28 +154,30 @@ header {
     width: 100%;
         
 }
- #sasuke {
+
+#sasuke {
     display: grid;
-    grid-column: 16 / 36;
+    grid-column: 16 / 56;
     grid-row: 12;
-    width: 100%
 }
- #sasuke img {
-    
-    width: 100%;
+
+#sasuke img {
+    width: 52%;
     opacity: 70%;
-    
+    transition: all 1s ease
 }
+
 #naruto {
     display: grid;
     grid-column: 36 / -1;
     grid-row: 5;
-    
 }
+
 #naruto img {
     width: 100%;
-   
+    transition: all 1s ease
  }
+
 #wioski article {
     background-color: white;
     grid-column: 40 / -5;
@@ -195,7 +197,6 @@ header {
     grid-row: 25 / 27;
     grid-column: 69 / -4;
 }
-
 
 #czytajWiecej li a {
     border: 1px black solid;
@@ -378,4 +379,58 @@ header {
 
 .trigger6.move {
     transform: translate(-2000px) rotate(1080deg);
+}
+
+/* dark mode */
+
+header.darkMode {
+    background-image: linear-gradient(110deg, #8000FF 55%, #8000FF, rgb(0, 0, 0), rgb(0, 0, 0) 55%);
+}
+
+#sasuke.darkMode {
+    grid-column: 10 / 45;
+    grid-row: 7;
+}
+
+#sasuke img.darkMode {
+    opacity: 1;
+    width: 100%
+}
+
+#naruto.darkMode {
+    grid-column: 46 / -1;
+    grid-row: 10;
+}
+
+#naruto img.darkMode {
+    opacity: 70%;
+    width: 80%
+}
+
+#wioski.darkMode {
+    background-image: linear-gradient(130deg, rgb(0, 0, 0), rgb(0, 0, 0) 68%, #8000FF 68%, #8000FF);
+}
+
+#bijuu.darkMode {
+    background-image: linear-gradient(50deg, #8000FF 68%, #8000FF,  rgb(0, 0, 0), rgb(0, 0, 0) 68% );
+}
+
+#klany.darkMode {
+    background-color: black
+}
+
+#klany article.darkMode {
+    background-color: #8000FF
+}
+
+#klany ul.darkMode {
+    background-color: #8000FF
+}
+
+#yellowWall.darkMode {
+    background-color: #8000FF
+}
+
+#sideMenu a.darkMode {
+    color: white
 }
