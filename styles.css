@@ -54,7 +54,19 @@ header {
     grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
     background-color: white;
-    height: 100vh
+    height: 100vh;
+   
+}
+
+#dojutsu {
+    display: grid;
+    grid-column: 1;
+    grid-row: 5;
+    grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
+    background-color: rgb(255, 216, 41);
+    height: 100vh;
+    margin-bottom: 200px;
 }
 
 #mainMenu {
@@ -335,4 +347,58 @@ header {
     grid-row: 33;
     grid-column: 18 / 28
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 200px;  
+    background: #242222;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
+}
+footer h1 {
+    display: grid;
+    font-size: 25px;
+    color: white;
+    grid-row: 7;
+    grid-column: 3 / 10;
+}
+footer h2 {
+    display: grid;
+    font-size: 25px;
+    color: white;
+    grid-row: 7;
+    grid-column: 64 / 93;
+}
+#dojutsu img {
+    display: grid;
+    grid-column: 13 / 66;
+    grid-row: 2 / 30;
+    width: 100%;
+
+}
+#dojutsu article {
+    background-color: white;
+    grid-column: 13 / 66;
+    grid-row: 20 / 41;
+    border: 1px solid black;
+    display: flex
+
+}
+#dojutsu article p {
+    font-size: 35px;
+    text-align: center;
+    padding: 70px 0px 0px 163px
+    
+}
+#dojutsu ul {
+    list-style: none;
+    flex: 90%;
+    height: 20%;
+    align-self: flex-end;
+}
+
 
