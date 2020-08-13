@@ -137,6 +137,7 @@ header {
     grid-row: 30 / 40;
     
 }
+
 #sideMenu ul {
     display: flex;
     flex-direction: column;
@@ -153,8 +154,7 @@ header {
     border-bottom: 2px solid transparent;
     transition-duration:0.3s;
 }
-        
-    
+          
 #sideMenu ul li a:hover {
     border-color:black;
 }
@@ -166,28 +166,30 @@ header {
     width: 100%;
         
 }
- #sasuke {
+
+#sasuke {
     display: grid;
-    grid-column: 16 / 36;
+    grid-column: 16 / 56;
     grid-row: 12;
-    width: 100%
 }
- #sasuke img {
-    
-    width: 100%;
+
+#sasuke img {
+    width: 52%;
     opacity: 70%;
-    
+    transition: all 1s ease
 }
+
 #naruto {
     display: grid;
     grid-column: 36 / -1;
     grid-row: 5;
-    
 }
+
 #naruto img {
     width: 100%;
-   
+    transition: all 1s ease
  }
+
 #wioski article {
     background-color: white;
     grid-column: 40 / -5;
@@ -207,7 +209,6 @@ header {
     grid-row: 25 / 27;
     grid-column: 69 / -4;
 }
-
 
 #czytajWiecej li a {
     border: 1px black solid;
@@ -318,34 +319,132 @@ header {
     
 }
 
-#yellowWall > *:first-child {
-    grid-row: 4;
-    grid-column: 5 / 15
+/*scrollmagic*/
+
+.trigger1 {
+    grid-row: 4 / 13;
+    grid-column: 5 / 15;
+    position: relative;
+    left: 2000px;
+    transition: all .9s ease;
 }
 
-#yellowWall > *:first-child + * {
-    grid-row: 6;
-    grid-column: 20 / 30
+.trigger1.move {
+    transform: translate(-2000px) rotate(1080deg);
 }
 
-#yellowWall > *:first-child + * + * {
-    grid-row: 19;
-    grid-column: 7 / 20
+.trigger2 {
+    grid-row: 6 / 19;
+    grid-column: 20 / 30;
+    position: relative;
+    left: 2000px;
+    transition: all .9s ease;
 }
 
-#yellowWall > *:first-child + * + * + * {
-    grid-row: 22;
-    grid-column: 22 / 32
+.trigger2.move {
+    transform: translate(-2000px) rotate(1080deg);
 }
 
-#yellowWall > *:first-child + * + * + * + * {
-    grid-row: 28;
-    grid-column: 6 / 16
+.trigger3 {
+    grid-row: 19 / 24;
+    grid-column: 7 / 20;
+    position: relative;
+    left: 2000px;
+    transition: all .9s ease;
 }
 
-#yellowWall > *:first-child + * + * + * + * + * {
-    grid-row: 33;
-    grid-column: 18 / 28
+.trigger3.move {
+    transform: translate(-2000px) rotate(1080deg);
+}
+
+.trigger4 {
+    grid-row: 22 / 31;
+    grid-column: 22 / 32;
+    position: relative;
+    left: 2000px;
+    transition: all .9s ease;
+}
+
+.trigger4.move {
+    transform: translate(-2000px) rotate(1080deg);
+}
+
+.trigger5 {
+    grid-row: 28 / 37;
+    grid-column: 6 / 16;
+    position: relative;
+    left: 2000px;
+    transition: all .9s ease;
+}
+
+.trigger5.move {
+    transform: translate(-2000px) rotate(1080deg);
+}
+
+.trigger6 {
+    grid-row: 33 / 42;
+    grid-column: 18 / 28;
+    position: relative;
+    left: 2000px;
+    transition: all .9s ease;
+}
+
+.trigger6.move {
+    transform: translate(-2000px) rotate(1080deg);
+}
+
+/* dark mode */
+
+header.darkMode {
+    background-image: linear-gradient(110deg, #8000FF 55%, #8000FF, rgb(0, 0, 0), rgb(0, 0, 0) 55%);
+}
+
+#sasuke.darkMode {
+    grid-column: 10 / 45;
+    grid-row: 7;
+}
+
+#sasuke img.darkMode {
+    opacity: 1;
+    width: 100%
+}
+
+#naruto.darkMode {
+    grid-column: 46 / -1;
+    grid-row: 10;
+}
+
+#naruto img.darkMode {
+    opacity: 70%;
+    width: 80%
+}
+
+#wioski.darkMode {
+    background-image: linear-gradient(130deg, rgb(0, 0, 0), rgb(0, 0, 0) 68%, #8000FF 68%, #8000FF);
+}
+
+#bijuu.darkMode {
+    background-image: linear-gradient(50deg, #8000FF 68%, #8000FF,  rgb(0, 0, 0), rgb(0, 0, 0) 68% );
+}
+
+#klany.darkMode {
+    background-color: black
+}
+
+#klany article.darkMode {
+    background-color: #8000FF
+}
+
+#klany ul.darkMode {
+    background-color: #8000FF
+}
+
+#yellowWall.darkMode {
+    background-color: #8000FF
+}
+
+#sideMenu a.darkMode {
+    color: white
 }
 
 footer {
@@ -400,5 +499,3 @@ footer h2 {
     height: 20%;
     align-self: flex-end;
 }
-
-
