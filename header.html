@@ -23,10 +23,10 @@
             </div>
          <div id="sideMenu">
              <ul>
-                 <li><a href="#">Wioski</a></li>
-                 <li><a href="#">Bijuu</a></li>
-                 <li><a href="#">Klany</a></li>
-                 <li><a href="#">Dojutsu</a></li>
+                 <li><a href="#wioski">Wioski</a></li>
+                 <li><a href="#bijuu">Bijuu</a></li>
+                 <li><a href="#klany">Klany</a></li>
+                 <li><a href="#dojutsu">Dojutsu</a></li>
              </ul>
             </div>
             <a id="sasuke"><img  src="img/sasuke%20render.png" alt="sasuke"></a>
@@ -74,17 +74,34 @@ coords="564,461,593,294,589,263,612,251,637,215,625,203,675,198,709,233,688,243,
             </div>
         </div>
         <div id="dojutsu">
-            <img src="img/oczy.png" alt="oczy">
+            <div id="oczy">
+                <div class="background"></div>
+                <img class="itachi" src="img/itachi.png" alt="itachi">
+                <div class="eye left">
+                    <div class="circle circle-in">
+                        <div class="curse curse-pos1"></div>
+                        <div class="curse curse-mid"></div>
+                        <div class="curse curse-pos3"></div>
+                    </div>
+                </div>
+                <div class="eye right">
+                    <div class="circle circle-in">
+                        <div class="curse curse-pos1"></div>
+                        <div class="curse curse-mid"></div>
+                        <div class="curse curse-pos3"></div>
+                    </div>
+                </div>
+            </div>
             <article>
                 <p>Dojutsu to zdolności ninja, które wykorzystują oczy, będące efektem ubocznym specyficznego kekkei genkai lub kekkei mōra. Słowa te odnoszą się do samej pary oczu, która posiada kilka pasywnych zdolności oraz jakiejkolwiek techniki, której wykonanie od nich zależy; wcześniejsze wymagają niewielkiej ilości czakry do użytku podczas, gdy późniejsze zależą od techniki. Dōjutsu może zostać także przeszczepione innym, choć używanie przez nich dōjutsu jest zazwyczaj bardziej ograniczone lub bywa wyczerpujące</p>
                 <ul id="czytajWiecej"><li><a href="#">Czytaj więcej</a></li></ul>
             </article>
-            
+            <img id="logoUzumaki" src="img/uzumaki%20clan%20logo%20render.png" alt="Uzumaki">
         </div>
-          <footer>
-    <h1>Copyright © 2020</h1>
-    <h2>Realizacja Arakdiusz Materka</h2>          
-</footer>
+        <footer>
+            <h1>Copyright © 2020</h1>
+            <h2>Realizacja Arakdiusz i Adrian Materka</h2>          
+        </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
@@ -154,6 +171,7 @@ coords="564,461,593,294,589,263,612,251,637,215,625,203,675,198,709,233,688,243,
         const klanyUl = document.querySelector("#klany ul");
         const yellowWall = document.querySelector("#yellowWall");
         const sideMenuA = document.querySelectorAll("#sideMenu a");
+        const dojutsu = document.querySelector("#dojutsu");
         
         
         sasuke.addEventListener("click", function(){
@@ -169,12 +187,48 @@ coords="564,461,593,294,589,263,612,251,637,215,625,203,675,198,709,233,688,243,
             klanyArticle.classList.toggle("darkMode");
             klanyUl.classList.toggle("darkMode");
             yellowWall.classList.toggle("darkMode");
+            dojutsu.classList.toggle("darkMode");
             
             for (const a of sideMenuA) {
                 a.classList.toggle("darkMode");
             }
         });
         
+        //ruchome oczy
+        
+        $("#dojutsu").mousemove(function(event) {
+            var eye = $(".eye");
+            var x = (eye.offset().left) + (eye.width() / 2);
+            var y = (eye.offset().top) + (eye.height() / 2);
+            var rad = Math.atan2(event.pageX - x, event.pageY - y);
+            var rot = (rad * (180 / Math.PI) * -1) + 180;
+            eye.css({
+                '-webkit-transform': 'rotate(' + rot + 'deg)',
+                '-moz-transform': 'rotate(' + rot + 'deg)',
+                '-ms-transform': 'rotate(' + rot + 'deg)',
+                'transform': 'rotate(' + rot + 'deg)'
+            });
+        });
+        
+        //płyne przewijanie
+        
+        function scroll(e) {
+        const href = $(this).attr('href');
+        e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $(href).offset().top
+            }, 1000);
+        location.hash = href;
+        };
+        $('a[href^="#"]').click(scroll);
+        function myFunction() {
+        const x = document.getElementById("nav");
+            if (x.style.display === "grid") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "grid";
+                }
+            };  
     </script>
 </body>
 </html>

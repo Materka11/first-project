@@ -5,17 +5,16 @@
 
 #page {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(1920px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(1080px, 1fr));
     font-family: 'Oswald', sans-serif;
     overflow: hidden;
     box-sizing: border-box;
-    
 }
 
 header {
     display: grid;
-    grid-column: 1;
+    grid-column: 1 / -1;
     grid-row: 1;
     grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
@@ -27,7 +26,7 @@ header {
 
 #wioski {
     display: grid;
-    grid-column: 1;
+    grid-column: 1 / -1;
     grid-row: 2;
     grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
@@ -38,7 +37,7 @@ header {
 
 #bijuu {
     display: grid;
-    grid-column: 1;
+    grid-column: 1 / -1;
     grid-row: 3;
     grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
@@ -49,7 +48,7 @@ header {
 
 #klany {
     display: grid;
-    grid-column: 1;
+    grid-column: 1 / -1;
     grid-row: 4;
     grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
@@ -60,13 +59,25 @@ header {
 
 #dojutsu {
     display: grid;
-    grid-column: 1;
+    grid-column: 1 / -1;
     grid-row: 5;
     grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
     background-color: rgb(255, 216, 41);
     height: 100vh;
     margin-bottom: 200px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 200px;  
+    background: #242222;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
 }
 
 #mainMenu {
@@ -447,55 +458,191 @@ header.darkMode {
     color: white
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 200px;  
-    background: #242222;
-    z-index: -1;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
+#dojutsu.darkMode {
+    background-color: #8000FF
 }
-footer h1 {
-    display: grid;
-    font-size: 25px;
-    color: white;
-    grid-row: 7;
-    grid-column: 3 / 10;
-}
-footer h2 {
-    display: grid;
-    font-size: 25px;
-    color: white;
-    grid-row: 7;
-    grid-column: 64 / 93;
-}
-#dojutsu img {
-    display: grid;
-    grid-column: 13 / 66;
-    grid-row: 2 / 30;
-    width: 100%;
 
+/* caly element */
+
+#dojutsu #oczy {
+    display: grid;
+    grid-column: 23 / 55;
+    grid-row: 1 / 20;
+    position: relative;
+    grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(.5px, 1fr));
 }
+
+/* bialki oczne */
+
+#dojutsu .background {
+    width: 500px;
+    height: 300px;
+    background-color: #a6a6a6;
+    z-index: 0;
+    grid-column: 7;
+    grid-row: 100
+}
+
+/* glowna postac */
+
+#dojutsu .itachi {
+    z-index: 1;
+    width: 100%;
+    grid-column: 1 / -1
+}
+
+/* oczy pozycja */
+
+#dojutsu .eye {
+    z-index: 0;
+    position: absolute;
+    width: 40px;
+    height: 60px;
+}
+
+#dojutsu .eye.left {
+    grid-row: 293;
+    grid-column: 13
+}
+
+#dojutsu .eye.right {
+    grid-column: 20;
+    grid-row: 283
+}
+
+/* oczy */
+
+.circle {
+  width: 35px; /* 145px */
+  height: 35px; /* 145px */
+  border-radius: 50%;
+  border: 2px solid #111;
+  -webkit-box-shadow: inset 0 0 20px #111;
+}
+
+.circle-in {
+  background: #a10000;
+  position: relative;
+}
+
+.circle-in:before {
+  content: "";
+  position: absolute;
+  height: 5px; /* 25px */
+  width: 5px; /* 25px */
+  border-radius: 50%;
+  background-color: #111;
+  margin: 15px; /* 59px */
+}
+
+.circle-in:after {
+  content: "";
+  position: absolute;
+  height: 23px; /* 95px */
+  width: 23px; /* 95px */
+  border-radius: 50%;
+  border: 1px solid rgba(17, 17, 17, 0.5);
+  margin: 5px; /* 20px */
+}
+
+.curse {
+  height: 5px; /* 23px */
+  width: 5px; /* 23px */
+  position: absolute;
+  background: #111;
+  border-radius: 50%;
+}
+
+.curse:before {
+  content: "";
+  position: absolute;
+  width: 8px; /* 22px */
+  height: 7px; /* 25px */
+  border-radius: 50%;
+  border-top: 2px solid #111;
+  border-left: 5px solid transparent;
+  left: 100%;
+  margin: -10% -140%; /* -10% -95% */
+}
+
+.curse-pos1 {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  position: absolute;
+  margin: 23px 6px; /* 85px 20px */
+}
+
+.curse-pos3 {
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+  position: absolute;
+  margin: 23px 24px; /* 85px 100px */
+} 
+
+.curse-mid {
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-50deg);
+  position: absolute;
+  margin: 5px 16px; /* 16px 58px */
+}
+
+/*
+#dojutsu .sharingan {
+    z-index: 2;
+    position: absolute;
+    width: 14%
+}
+
+#dojutsu .sharingan.left {
+    transform: translate(100px, 110px)
+}
+
+#dojutsu .sharingan.right {
+    transform: translate(404px, 110px)
+}
+*/
+
 #dojutsu article {
     background-color: white;
-    grid-column: 13 / 66;
+    grid-column: 13 / -12;
     grid-row: 20 / 41;
     border: 1px solid black;
-    display: flex
-
+    display: flex;
+    z-index: 4
 }
+
 #dojutsu article p {
     font-size: 35px;
     text-align: center;
     padding: 70px 0px 0px 163px
-    
 }
+
 #dojutsu ul {
     list-style: none;
     flex: 90%;
     height: 20%;
     align-self: flex-end;
+}
+
+#dojutsu #logoUzumaki {
+    grid-row: -4;
+    grid-column: 37 / 44;
+    width: 100%
+}
+
+footer h1 {
+    display: grid;
+    font-size: 25px;
+    color: white;
+    grid-row: 7;
+    grid-column: 14 / 21;
+}
+
+footer h2 {
+    display: grid;
+    font-size: 25px;
+    color: white;
+    grid-row: 7;
+    grid-column: 57 / -7;
 }
