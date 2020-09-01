@@ -2,6 +2,7 @@ header {
     background-color: white;
     background-image: none;
 }
+
 #swiat {
     display: grid;
     grid-column: 1 / -1;
