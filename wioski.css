@@ -1,0 +1,72 @@
+header {
+    background-color: white;
+    background-image: none;
+}
+#swiat {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 1;
+    width: 100%;
+}
+
+#logo  {
+    display: grid;
+    grid-column: 5 / 13;
+    grid-row: 3;
+    width: 100%;
+    z-index: 2;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+}
+
+#kamien  {
+    fill:green;
+    transition: .3s fill;
+    
+}
+
+a #kamien:hover {
+    fill:yellow;
+    
+}
+
+#piasek {
+    fill:green;
+    transition: .3s fill;
+}
+
+a #piasek:hover {
+    fill:yellow;
+    
+}
+
+#lisc {
+    fill:green;
+    transition: .3s fill;
+}
+
+a #lisc:hover {
+    fill:yellow;
+}
+
+#chmura {
+    fill:green;
+    transition: .3s fill;
+}
+
+a #chmura:hover {
+    fill:yellow;
+}
+
+#mgla {
+    fill:green;
+    transition: .3s fill;
+}
+
+a #mgla:hover {
+    fill:yellow;
+}

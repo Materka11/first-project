@@ -5,7 +5,7 @@
 
 #page {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(1920px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(1080px, 1fr));
     font-family: 'Oswald', sans-serif;
     overflow: hidden;
@@ -15,7 +15,7 @@
 
 header {
     display: grid;
-    grid-column: 1;
+    grid-column: 1 / -1;
     grid-row: 1;
     grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
@@ -27,7 +27,7 @@ header {
 
 #wioski {
     display: grid;
-    grid-column: 1;
+    grid-column: 1 / -1;
     grid-row: 2;
     grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
