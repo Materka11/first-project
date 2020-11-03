@@ -1,13 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Oswald', sans-serif;
 }
 
 #page {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(1080px, 1fr));
-    font-family: 'Oswald', sans-serif;
+    grid-template-rows: repeat(auto-fill, minmax(100vh, 1fr));
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -214,11 +214,39 @@ footer {
     padding: 60px
 }
 
+@media screen and (max-width: 1780px) {
+    
+    #wioski article p {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    
+    #wioski article p {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1525px) {
+    
+    #wioski article p {
+        font-size: 26px;
+    }
+}
+
 #wioski ul {
     display: grid;
     list-style: none;
     grid-row: 25 / 27;
     grid-column: 69 / -4;
+}
+
+@media screen and (max-width: 1900px) {
+    
+    #wioski ul {
+        grid-column: 70 / -12;
+    }
 }
 
 #czytajWiecej li a {
@@ -259,16 +287,28 @@ footer {
     
 }
 
+@media screen and (max-height: 820px) {
+    
+    #wioski #kageMapa {
+        grid-row: 3 / 26;
+    }
+}
+
 #wioski #Kage{
     width: 100%;
     
 }
 
 #bijuu img {
-    width: 100%;
+   /* width: 100%;
     grid-column: 25 / -25;
-    grid-row: 1;
-    z-index: 1
+    grid-row: 1; */ 
+    z-index: 1;
+    position: absolute;
+    width: 707px;
+    left: 50%;
+    transform: translateX(-50%)
+    
 }
 
 #bijuu article {
@@ -279,10 +319,58 @@ footer {
     display: flex
 }
 
+@media screen and (max-height: 1030px) {
+    
+    #bijuu article {
+        grid-row: 20 / 35;
+    }
+}
+
+@media screen and (max-height: 890px) {
+    
+    #bijuu article {
+        grid-row: 20 / 30;
+    }
+}
+
 #bijuu article p {
     font-size: 40px;
     text-align: center;
     padding: 140px 0px 0px 150px
+}
+
+@media screen and (max-height: 820px) {
+    
+    #bijuu article p {
+        padding: 80px 0px 0px 150px;
+        font-size: 36px;
+        
+    }
+}
+
+@media screen and (max-height: 1030px) {
+    
+    #bijuu article p {
+        font-size: 32px;
+        
+    }
+}
+
+@media screen and (max-height: 890px) {
+    
+    #bijuu article p {
+        font-size: 28px;
+        padding: 70px 0px 0px 150px;
+        
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    
+    #bijuu article p {
+        padding: 80px 0px 0px 150px;
+
+    }
 }
 
 #bijuu ul {
@@ -290,6 +378,27 @@ footer {
     flex: 30%;
     height: 20%;
     align-self: flex-end;
+}
+
+@media screen and (max-width: 1860px) {
+    
+    #bijuu ul {
+        flex: 50%;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    
+    #bijuu ul {
+        flex: 70%;
+    }
+}
+
+@media screen and (max-height: 880px) {
+    
+    #bijuu ul {
+        height: 25%;
+    }
 }
 
 #klany article {
@@ -466,12 +575,91 @@ header.darkMode {
 
 #dojutsu #oczy {
     display: grid;
-    grid-column: 23 / 55;
+    grid-column: 25 / -1;
     grid-row: 1 / 20;
     position: relative;
     grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(.5px, 1fr));
 }
+
+@media screen and (max-width: 1890px) {
+    
+    #dojutsu #oczy {
+        grid-column: 24 / -1;  
+    }   
+}
+
+@media screen and (max-width: 1860px) {
+    
+    #dojutsu #oczy {
+        grid-column: 23 / -1;  
+    }   
+}
+
+@media screen and (max-width: 1830px) {
+    
+    #dojutsu #oczy {
+        grid-column: 22 / -1;  
+    }   
+}
+
+@media screen and (max-width: 1800px) {
+    
+    #dojutsu #oczy {
+        grid-column: 21 / -1;  
+    }   
+}
+
+@media screen and (max-width: 1770px) {
+    
+    #dojutsu #oczy {
+        grid-column: 20 / -1;  
+    }   
+}
+
+@media screen and (max-width: 1740px) {
+    
+    #dojutsu #oczy {
+        grid-column: 19 / -1;  
+    }   
+}
+
+@media screen and (max-width: 1710px) {
+    
+    #dojutsu #oczy {
+        grid-column: 18 / -1;  
+    }   
+}
+
+@media screen and (max-width: 1680px) {
+    
+    #dojutsu #oczy {
+        grid-column: 17 / -1;  
+    }   
+}
+
+@media screen and (max-width: 1550px) {
+    
+    #dojutsu #oczy {
+        grid-column: 16 / -1;  
+    }   
+}
+
+@media screen and (max-width: 1500px) {
+    
+    #dojutsu #oczy {
+        grid-column: 15 / -1;  
+    }   
+}
+
+@media screen and (max-width: 1460px) {
+    
+    #dojutsu #oczy {
+        grid-column: 14 / -1;  
+    }   
+}
+
+
 
 /* bialki oczne */
 
@@ -488,7 +676,7 @@ header.darkMode {
 
 #dojutsu .itachi {
     z-index: 1;
-    width: 100%;
+    width: 802px;
     grid-column: 1 / -1
 }
 
@@ -612,10 +800,82 @@ header.darkMode {
     z-index: 4
 }
 
+@media screen and (max-height: 1070px) {
+    
+    #dojutsu article {
+        grid-row: 20 / 37;
+    }
+}
+
+@media screen and (max-height: 970px) {
+    
+    #dojutsu article {
+        grid-row: 20 / 34;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    
+    #dojutsu article {
+        grid-row: 20 / 30;
+    }
+}
+
+@media screen and (max-height: 820px) {
+    
+    #dojutsu article {
+        grid-row: 19 / 27;
+    }
+}
+
 #dojutsu article p {
     font-size: 35px;
     text-align: center;
     padding: 70px 0px 0px 163px
+}
+
+@media screen and (max-width: 1740px) {
+    
+    #dojutsu article p {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 1590px) {
+    
+    #dojutsu article p {
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-height: 1070px) {
+    
+    #dojutsu article p {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-height: 970px) {
+    
+    #dojutsu article p {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    
+    #dojutsu article p {
+        font-size: 19px;
+        padding: 30px 0px 0px 163px;
+    }
+}
+
+@media screen and (max-height: 820px) {
+    
+    #dojutsu article p {
+        font-size: 16px;
+        padding: 20px 0px 0px 163px;
+    }
 }
 
 #dojutsu ul {
@@ -623,6 +883,35 @@ header.darkMode {
     flex: 90%;
     height: 20%;
     align-self: flex-end;
+}
+
+@media screen and (max-width: 1740px) {
+    
+    #dojutsu ul {
+        flex: 115%;
+    }
+}
+
+@media screen and (max-width: 1590px) {
+    
+    #dojutsu ul {
+        flex: 150%;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    
+    #dojutsu ul {
+        height: 30%;
+    }
+}
+
+@media screen and (max-height: 820px) {
+    
+    #dojutsu ul {
+        height: 30%;
+        flex: 110%;
+    }
 }
 
 #dojutsu #logoUzumaki {

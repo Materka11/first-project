@@ -1,6 +1,16 @@
 header {
     background-color: white;
     background-image: none;
+    transform:translate(0px,-50px);
+}
+
+#sand {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
+    height: 100vh;
 }
 
 #swiat {
@@ -14,7 +24,7 @@ header {
 #logo  {
     display: grid;
     grid-column: 5 / 13;
-    grid-row: 3;
+    grid-row: 5;
     width: 100%;
     z-index: 2;
 }
@@ -70,4 +80,238 @@ a #chmura:hover {
 
 a #mgla:hover {
     fill:yellow;
+}
+
+/*wioska piasku*/
+
+#sand .background {
+    grid-row: 1 /-1;
+    grid-column: 1 / -1;
+}
+
+button {  /**/
+    grid-column: 1 / 6; /**/
+    grid-row: 2 / -2;
+    border-radius: 100px 0 0 100px;
+    transition: all .9s ease; /**/
+    z-index: 2; /**/
+    transform: translate(93.5vw, 0); /**/
+}
+
+#sand .color {
+    background-color: #527164;
+} 
+
+
+#sand button p {
+    transform:rotate(90deg);
+    font-size: 45px;
+    letter-spacing: 60px;
+     
+}
+
+button p.rozwin {
+    margin-bottom: 275px;
+}
+
+button p.rozwin.move {
+    display: none;
+}
+
+button p.zwin {
+    display:none;
+    margin-bottom: 130px;
+}
+
+button p.zwin.move {
+    display: block;
+}
+
+button.move { /**/
+    transform: translate(-0.1vw,0);   
+}
+
+.info { /**/
+    grid-column: 5 / -1;
+    grid-row: 2 / -2;
+    background-color: #DBC49A;
+    z-index: 1;
+    transform: translate(93.5vw, 0);
+    transition: all .9s ease;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(25px, 1fr));
+}
+
+.info.move { /**/
+    transform: translate(1vw, 0);
+}
+
+.info img {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.info.render {
+    
+}
+
+.info .gaara {
+    grid-column: -2 / -18;
+    grid-row: 2;
+}
+
+.info .kazekage1 {
+    grid-column: 1 / 15;
+    grid-row: 2;
+}
+
+.info .kazekage2 {
+    grid-column: 12 / 27;
+    grid-row: 3
+
+}
+
+.info .kazekage3 {
+    grid-column: -33 / -17;
+    grid-row: 3;
+}
+
+.info .officeKazekage {
+    grid-column: 30 / 41;
+    grid-row: 19;
+}
+
+.info .gateSand {
+    grid-column: 30 / 41;
+    grid-row: -9;
+}
+
+.info .circle {    /*kółka*/
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: none;
+}
+
+.info #sc1 {
+    grid-column: 27;
+    grid-row: 10;
+}
+
+.info #sc2 {
+    grid-column: 30;
+    grid-row: 12;
+    
+}
+
+.info #sc3 {
+    grid-column: 33;
+    grid-row: 15;
+}
+
+.info #sc4 {
+    grid-column: -37;
+    grid-row: 16;
+}
+
+.info #sc5 {
+    grid-column: -34;
+    grid-row: 14;
+}
+
+.info #sc5 {
+    grid-column: -34;
+    grid-row: 14;
+}
+
+.info #sc6 {
+    grid-column: -31;
+    grid-row: 13;
+}
+
+.info #sc7 {
+    grid-column: 7;
+    grid-row: -17;
+}
+
+.info #sc8 {
+    grid-column: 10;
+    grid-row: -15;
+}
+
+.info #sc9 {
+    grid-column: 13;
+    grid-row: -13;
+}
+
+.info #sc10 {
+    grid-column: 17;
+    grid-row: -12;
+}
+
+.info #sc11 {
+    grid-column: 21;
+    grid-row: -12;
+}
+
+.info #sc12 {
+    grid-column: 25;
+    grid-row: -14;
+}
+
+.info #sc13 {
+    grid-column: 28;
+    grid-row: -16;
+}
+
+.info #sc14 {
+    grid-column: 35;
+    grid-row: -15;
+}
+
+.info #sc15 {
+    grid-column: 35;
+    grid-row: -12;
+}
+
+.info #sc16 {
+    grid-column: 40;
+    grid-row: -16;
+}
+
+.info #sc17 {
+    grid-column: 43;
+    grid-row: -15;
+}
+
+.info #sc18 {
+    grid-column: 46;
+    grid-row: -14;
+}
+
+.info #sc19 {
+    grid-column: 46;
+    grid-row: -14;
+}
+
+.info #sc20 {
+    grid-column: 49;
+    grid-row: -14;
+}
+
+.info #sc21 {
+    grid-column: 52;
+    grid-row: -15;
+}
+
+.info #sc22 {
+    grid-column: 55;
+    grid-row: -17;
+}
+
+.info #sc23 {
+    grid-column: 58;
+    grid-row: -19;
 }
