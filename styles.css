@@ -22,6 +22,7 @@ header {
     background-color: unset;
     background-image: linear-gradient(110deg, rgb(255, 216, 41) 55%, rgb(255, 216, 41), rgb(255, 255, 255), rgb(255, 255, 255) 55%);
     height: 100vh;
+    overflow: hidden
 }
 
 #wioski {
@@ -66,6 +67,7 @@ header {
     background-color: rgb(255, 216, 41);
     height: 100vh;
     margin-bottom: 200px;
+    position: relative
 }
 
 footer {
@@ -145,7 +147,7 @@ footer {
 #sideMenu {
     display: grid; 
     grid-column: 2 / 8;
-    grid-row: 30 / 40;
+    grid-row: 30 / -5;
     
 }
 
@@ -187,7 +189,8 @@ footer {
 #sasuke img {
     width: 52%;
     opacity: 70%;
-    transition: all 1s ease
+    transition: all 1s ease;
+    cursor: pointer
 }
 
 #naruto {
@@ -201,6 +204,94 @@ footer {
     transition: all 1s ease
  }
 
+@media screen and (max-width: 1550px) {
+    
+    #naruto {
+        grid-column: 30 / -1;
+        grid-row: 7
+    }
+    
+    #sasuke {
+        grid-column: 12 / 52
+    }
+}
+
+@media screen and (max-height: 1000px) {
+     
+    #sideMenu {
+        grid-row: 25 / -5;
+    }
+}
+
+@media screen and (max-height: 900px) {
+     
+    #sideMenu {
+        grid-row: 23 / -3;
+    }
+    
+    #naruto {
+        grid-column: 36 / -7;
+        grid-row: 5;
+    }
+    
+    #sasuke {
+        grid-column: 16 / 50;
+    }
+}
+
+@media screen and (max-height: 800px) {
+     
+    #sideMenu {
+        grid-row: 21 / -2;
+    }
+    
+    #naruto {
+        grid-column: 43 / -7;
+        grid-row: 5;
+    }
+    
+    #sasuke {
+        grid-column: 23 / 50;
+    }
+}
+
+@media screen and (max-width: 1550px) and (max-height: 1080px) {
+    
+    #naruto {
+        grid-column: 30 / -1;
+        grid-row: 7
+    }
+    
+    #sasuke {
+        grid-column: 12 / 52
+    }
+}
+
+@media screen and (max-width: 1550px) and (max-height: 800px) {
+    
+    #naruto {
+        grid-column: 30 / -5;
+        grid-row: 7
+    }
+    
+    #sasuke {
+        grid-column: 12 / 47
+    }
+}
+
+@media screen and (max-width: 1550px) and (max-height: 700px) {
+    
+    #naruto {
+        grid-column: 35 / -5;
+        grid-row: 7
+    }
+    
+    #sasuke {
+        grid-column: 17 / 47
+    }
+}
+
+/*wioski*/
 #wioski article {
     background-color: white;
     grid-column: 40 / -5;
@@ -421,12 +512,12 @@ footer {
     grid-column: 32 / 40;
     background-color: rgb(255, 216, 41);
     border: 1px solid black;
-    padding: 84px 41px;
+    padding: 84px 40px;
     border-radius: 50%
 }
 
 #klany .logo {
-    width: 90%
+    width: 225px
 }
 
 #yellowWall {
@@ -513,6 +604,412 @@ footer {
     transform: translate(-2000px) rotate(1080deg);
 }
 
+@media screen and (max-width: 1800px) {
+    
+    .trigger1.move {
+        transform: translate(-2070px) rotate(1080deg);
+    }
+    
+    .trigger2.move {
+        transform: translate(-2070px) rotate(1080deg);
+    }
+    
+    .trigger3.move {
+        transform: translate(-2070px) rotate(1080deg);
+    }
+    
+    .trigger4.move {
+        transform: translate(-2100px) rotate(1080deg);
+    }
+    
+    .trigger5.move {
+        transform: translate(-2070px) rotate(1080deg);
+    }
+    
+    .trigger6.move {
+        transform: translate(-2070px) rotate(1080deg);
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    
+    #yellowWall {
+         grid-column: 39 / -1
+    }
+    
+    #klany ul {
+        grid-column: 30 / 38;
+    }
+    
+    #klany article {
+        grid-column: 3 / 34;
+    }
+    
+    .trigger1.move {
+        transform: translate(-2070px) rotate(1080deg);
+    }
+    
+    .trigger2.move {
+        transform: translate(-2100px) rotate(1080deg);
+    }
+    
+    .trigger3.move {
+        transform: translate(-2070px) rotate(1080deg);
+    }
+    
+    .trigger4.move {
+        transform: translate(-2100px) rotate(1080deg);
+    }
+    
+    .trigger5.move {
+        transform: translate(-2070px) rotate(1080deg);
+    }
+    
+    .trigger6.move {
+        transform: translate(-2100px) rotate(1080deg);
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    
+    #klany .logo {
+        width: 200px
+    }
+    
+    #yellowWall {
+         grid-column: 38 / -1
+    }
+    
+    #klany ul {
+        grid-column: 29 / 37;
+    }
+    
+    #klany article {
+        grid-column: 2 / 33;
+    }
+    
+    .trigger1 {
+        grid-column: 5 / 13;
+    }
+    
+    .trigger1.move {
+        transform: translate(-2090px) rotate(1080deg);
+    }
+    
+    .trigger2 {
+        grid-column: 20 / 28;
+    }
+    
+    .trigger2.move {
+        transform: translate(-2160px) rotate(1080deg);
+    }
+    
+    .trigger3 {
+        grid-column: 7 / 18;
+    }
+    
+    .trigger3.move {
+        transform: translate(-2090px) rotate(1080deg);
+    }
+    
+    .trigger4 {
+        grid-column: 22 / 30;
+    }
+    
+    .trigger4.move {
+        transform: translate(-2160px) rotate(1080deg);
+    }
+    
+    .trigger5 {
+        grid-column: 6 / 14;
+    }
+    
+    .trigger5.move {
+        transform: translate(-2090px) rotate(1080deg);
+    }
+    
+    .trigger6 {
+        grid-column: 18 / 26;
+    }
+    
+    .trigger6.move {
+        transform: translate(-2120px) rotate(1080deg);
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    
+    #klany .logo {
+        width: 180px
+    }
+    
+    .trigger1 {
+        grid-column: 5 / 11;
+    }
+    
+    .trigger1.move {
+        transform: translate(-2090px) rotate(1080deg);
+    }
+    
+    .trigger2 {
+        grid-column: 20 / 26;
+    }
+    
+    .trigger2.move {
+        transform: translate(-2220px) rotate(1080deg);
+    }
+    
+    .trigger3 {
+        grid-column: 7 / 16;
+    }
+    
+    .trigger3.move {
+        transform: translate(-2090px) rotate(1080deg);
+    }
+    
+    .trigger4 {
+        grid-column: 22 / 28;
+    }
+    
+    .trigger4.move {
+        transform: translate(-2210px) rotate(1080deg);
+    }
+    
+    .trigger5 {
+        grid-column: 6 / 12;
+    }
+    
+    .trigger5.move {
+        transform: translate(-2090px) rotate(1080deg);
+    }
+    
+    .trigger6 {
+        grid-column: 18 / 24;
+    }
+    
+    .trigger6.move {
+        transform: translate(-2190px) rotate(1080deg);
+    }
+}
+
+@media screen and (max-height: 1025px) {
+    
+    .trigger1 {
+        grid-row: 2 / 11;
+    }
+    
+    
+    .trigger2 {
+        grid-row: 4 / 17;
+    }
+    
+    
+    .trigger3 {
+        grid-row: 17 / 22;
+    }
+    
+    
+    .trigger4 {
+        grid-row: 20 / 29;
+    }
+    
+    
+    .trigger5 {
+        grid-row: 26 / 35;
+    }
+    
+    .trigger6 {
+        grid-row: 31 / 40;
+    }
+}
+
+@media screen and (max-height: 975px) {
+    
+    #klany ul {
+        grid-row: 27 / 35;
+    }
+    
+    #klany article {
+        grid-row: 2 / 33;
+    }
+    
+    .trigger2 {
+        grid-row: 3 / 16;
+    }
+    
+    
+    .trigger3 {
+        grid-row: 14 / 19;
+    }
+    
+    
+    .trigger4 {
+        grid-row: 17 / 26;
+    }
+    
+    
+    .trigger5 {
+        grid-row: 21 / 30;
+    }
+    
+    .trigger6 {
+        grid-row: 27 / 36;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    
+    #klany .logo {
+        width: 200px
+    }
+    
+    #klany ul {
+        grid-row: 23 / 31;
+    }
+    
+    #klany article {
+        grid-row: 2 / 31;
+        grid-column: 5 / 34;
+    }
+    
+    #klany article p {
+        font-size: 36px;
+    }
+    
+    .trigger1 {
+        grid-row: 2 / 10;
+        grid-column: 5 / 13;
+    }
+    
+    .trigger2 {
+        grid-row: 3 / 15;
+        grid-column: 20 / 28;
+    }
+    
+    
+    .trigger3 {
+        grid-row: 12 / 16;
+        grid-column: 7 / 18;
+    }
+    
+    
+    .trigger4 {
+        grid-row: 15 / 23;
+        grid-column: 22 / 30;
+    }
+    
+    
+    .trigger5 {
+        grid-row: 19 / 27;
+        grid-column: 6 / 14;
+    }
+    
+    .trigger6 {
+        grid-row: 25 / 33;
+        grid-column: 18 / 26;
+    }
+}
+
+@media screen and (max-height: 825px) {
+    
+    #klany .logo {
+        width: 180px
+    }
+    
+    #klany ul {
+        grid-row: 20 / 28;
+    }
+    
+    #klany article {
+        grid-row: 2 / 28;
+        grid-column: 5 / 32;
+    }
+    
+    #klany article p {
+        font-size: 32px;
+    }
+    
+    .trigger1 {
+        grid-row: 2 / 9;
+        grid-column: 5 / 11;
+    }
+    
+    .trigger2 {
+        grid-row: 3 / 14;
+        grid-column: 20 / 26;
+    }
+    
+    .trigger3 {
+        grid-row: 12 / 15;
+        grid-column: 7 / 16;
+    }
+    
+    .trigger4 {
+        grid-row: 15 / 22;
+        grid-column: 22 / 28;
+    }
+    
+    .trigger5 {
+        grid-row: 18 / 25;
+        grid-column: 6 / 12;
+    }
+    
+    .trigger6 {
+        grid-row: 23 / 30;
+        grid-column: 18 / 24;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    
+    #klany .logo {
+        width: 160px
+    }
+    
+    #klany ul {
+        grid-row: 18 / 26;
+    }
+    
+    #klany article {
+        grid-row: 2 / 26;
+        grid-column: 5 / 30;
+    }
+    
+    #klany article p {
+        font-size: 27px;
+    }
+    
+    .trigger1 {
+        grid-row: 2 / 8;
+        grid-column: 5 / 9;
+    }
+    
+    .trigger2 {
+        grid-row: 3 / 13;
+        grid-column: 20 / 24;
+    }
+    
+    .trigger3 {
+        grid-row: 12 / 13;
+        grid-column: 7 / 14;
+    }
+    
+    .trigger4 {
+        grid-row: 14 / 20;
+        grid-column: 22 / 26;
+    }
+    
+    .trigger5 {
+        grid-row: 17 / 23;
+        grid-column: 6 / 10;
+    }
+    
+    .trigger6 {
+        grid-row: 21 / 26;
+        grid-column: 18 / 22;
+    }
+}
+
 /* dark mode */
 
 header.darkMode {
@@ -532,6 +1029,78 @@ header.darkMode {
 #naruto.darkMode {
     grid-column: 46 / -1;
     grid-row: 10;
+}
+
+@media screen and (max-width: 1550px) {
+    
+    #naruto.darkMode {
+        grid-column: 38 / -1;
+        grid-row: 7
+    }
+    
+    #sasuke.darkMode {
+        grid-column: 10 / 39
+    }
+}
+
+@media screen and (max-height: 900px) {
+    
+    #naruto.darkMode {
+        grid-column: 40 / -7;
+        grid-row: 9
+    }
+    
+    #sasuke.darkMode {
+        grid-column: 10 / 37
+    }
+}
+
+@media screen and (max-height: 800px) {
+    
+    #naruto.darkMode {
+        grid-column: 40 / -11;
+        grid-row: 9
+    }
+    
+    #sasuke.darkMode {
+        grid-column: 10 / 33
+    }
+}
+
+@media screen and (max-width: 1550px) and (max-height: 1080px) {
+    
+    #naruto.darkMode {
+        grid-column: 38 / -1;
+        grid-row: 7
+    }
+    
+    #sasuke.darkMode {
+        grid-column: 10 / 39
+    }
+}
+
+@media screen and (max-width: 1550px) and (max-height: 800px) {
+    
+    #naruto.darkMode {
+        grid-column: 38 / -5;
+        grid-row: 8
+    }
+    
+    #sasuke.darkMode {
+        grid-column: 10 / 34
+    }
+}
+
+@media screen and (max-width: 1550px) and (max-height: 700px) {
+    
+    #naruto.darkMode {
+        grid-column: 38 / -8;
+        grid-row: 8
+    }
+    
+    #sasuke.darkMode {
+        grid-column: 10 / 31
+    }
 }
 
 #naruto img.darkMode {
@@ -915,9 +1484,13 @@ header.darkMode {
 }
 
 #dojutsu #logoUzumaki {
-    grid-row: -4;
-    grid-column: 37 / 44;
-    width: 100%
+    /*grid-row: -4;
+    grid-column: 37 / 44;*/
+    width: 176px;
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    transform: translate(-50%)
 }
 
 footer h1 {
@@ -925,7 +1498,7 @@ footer h1 {
     font-size: 25px;
     color: white;
     grid-row: 7;
-    grid-column: 14 / 21;
+    grid-column: 11 / 21;
 }
 
 footer h2 {
@@ -933,5 +1506,33 @@ footer h2 {
     font-size: 25px;
     color: white;
     grid-row: 7;
-    grid-column: 57 / -7;
+    grid-column: 54 / -1;
+}
+
+@media screen and (max-width: 1700px) {
+    
+    footer h2 {
+        grid-column: 48 / -1
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    
+    footer h2 {
+        grid-column: 44 / -1
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    
+    footer h2 {
+        grid-column: 41 / -1
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    
+    footer h2 {
+        grid-column: 38 / -1
+    }
 }
