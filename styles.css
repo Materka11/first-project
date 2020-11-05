@@ -326,6 +326,13 @@ footer {
     }
 }
 
+@media screen and (max-height: 768px) {
+    
+    #wioski article p {
+        font-size: 29px;
+    }
+}
+
 #wioski ul {
     display: grid;
     list-style: none;
@@ -385,6 +392,13 @@ footer {
     }
 }
 
+@media screen and (max-height: 768px) {
+    
+    #wioski #kageMapa {
+        grid-row: 2 / 25;
+    }
+}
+
 #wioski #Kage{
     width: 100%;
     
@@ -430,15 +444,6 @@ footer {
     padding: 140px 0px 0px 150px
 }
 
-@media screen and (max-height: 820px) {
-    
-    #bijuu article p {
-        padding: 80px 0px 0px 150px;
-        font-size: 36px;
-        
-    }
-}
-
 @media screen and (max-height: 1030px) {
     
     #bijuu article p {
@@ -456,10 +461,27 @@ footer {
     }
 }
 
+@media screen and (max-height: 820px) {
+    
+    #bijuu article p {
+        padding: 40px 0px 0px 226px;
+        font-size: 29px;
+        
+    }
+}
+
 @media screen and (max-width: 1500px) {
     
     #bijuu article p {
         padding: 80px 0px 0px 150px;
+
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    
+    #bijuu article p {
+        padding: 110px 0px 0px 150px;
 
     }
 }
@@ -1400,7 +1422,7 @@ header.darkMode {
 #dojutsu article p {
     font-size: 35px;
     text-align: center;
-    padding: 70px 0px 0px 163px
+    padding: 36px 0px 0px 141px
 }
 
 @media screen and (max-width: 1740px) {
@@ -1413,7 +1435,8 @@ header.darkMode {
 @media screen and (max-width: 1590px) {
     
     #dojutsu article p {
-        font-size: 27px;
+        font-size: 29px;
+        padding: 68px 0px 0px 163px;
     }
 }
 
@@ -1421,6 +1444,7 @@ header.darkMode {
     
     #dojutsu article p {
         font-size: 25px;
+        padding: 89px 0px 0px 205px;
     }
 }
 
@@ -1435,7 +1459,7 @@ header.darkMode {
     
     #dojutsu article p {
         font-size: 19px;
-        padding: 30px 0px 0px 163px;
+        padding: 48px 0px 0px 240px;
     }
 }
 
@@ -1443,7 +1467,7 @@ header.darkMode {
     
     #dojutsu article p {
         font-size: 16px;
-        padding: 20px 0px 0px 163px;
+        padding: 50px 0px 0px 335px;
     }
 }
 
@@ -1479,9 +1503,25 @@ header.darkMode {
     
     #dojutsu ul {
         height: 30%;
-        flex: 110%;
+        flex: 101%;
     }
 }
+
+@media screen and (max-height: 820px) {
+    
+    #czytajWiecej li a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-height: 820px) {
+    
+    #czytajWiecej li::before {
+        width: 100px;
+        height: 49px;
+    }
+}
+
 
 #dojutsu #logoUzumaki {
     /*grid-row: -4;
